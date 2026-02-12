@@ -1,0 +1,11 @@
+{
+	"name": {
+		"label": "Nome",
+		"placeholder": "Jonh Doe"
+	},
+	"phone": {
+		"label": "Telefone",
+		"placeholder": "(00) 00000-0000"
+	},
+	"submit": "Automatizar meu trabalho"
+}

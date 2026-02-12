@@ -1,0 +1,46 @@
+{
+	"hero": {
+		"title": "Pare de Perder Tempo com Tarefas Repetitivas",
+		"description": "Recupere mais de 20 horas por semana com fluxos de trabalho impulsionados por IA, desenhados para o futuro",
+		"cta": "Começar Automação"
+	},
+	"evolution": {
+		"title": "A Evolução do Trabalho",
+		"oldWay": {
+			"label": "O jeito antigo",
+			"tag": "Manual",
+			"title": "Lento e Sujeito a Erros",
+			"description": "Gargalos causados pela dependência humana"
+		},
+		"newWay": {
+			"label": "O novo jeito",
+			"tag": "Piloto de IA",
+			"title": "Instantâneo e Impecável",
+			"description": "Escala infinita com latência zero"
+		}
+	},
+	"capacities": {
+		"title": "Capacidades do Sistema",
+		"items": [
+			{
+				"title": "Sincronização Instantânea",
+				"description": "Dados em tempo real em todos os seus apps"
+			},
+			{
+				"title": "Zero Erros",
+				"description": "Garantia de 100% de precisão"
+			},
+			{
+				"title": "Uptime 24/7",
+				"description": "Sempre ligado, sempre trabalhando"
+			},
+			{
+				"title": "Insights Profundos",
+				"description": "Análises em que você pode confiar"
+			}
+		]
+	},
+	"cta": {
+		"title": "Turbine seu fluxo de trabalho!"
+	}
+}
