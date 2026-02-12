@@ -1,22 +1,30 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import { useHookFormMask } from "use-mask-input";
 import { z } from "zod";
 import content from "@/app/_content/form.json";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { AxiosN8N } from "@/lib/n8n";
 
 const schema = z.object({
 	name: z.string().min(2),
-	phone: z.string().min(11).max(11),
+	phone: z
+		.string()
+		.min(15)
+		.max(15)
+		.transform((val) => val.replace(/\D/g, "")),
 });
 
 type Schema = z.infer<typeof schema>;
 
 export function Form() {
+	const router = useRouter();
+
 	const {
 		register,
 		handleSubmit,
@@ -26,14 +34,22 @@ export function Form() {
 		resolver: zodResolver(schema),
 	});
 
+	const registerPhoneWithMask = useHookFormMask(register);
+
 	async function onSubmit(data: Schema) {
-		console.log(data);
+		await AxiosN8N(data);
+
+		router.push("/thank-you");
 
 		reset();
 	}
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+		<form
+			id="form"
+			onSubmit={handleSubmit(onSubmit)}
+			className="flex flex-col gap-4"
+		>
 			<div className="flex flex-col gap-2">
 				<Label htmlFor="name">{content.name.label}</Label>
 				<Input
@@ -48,7 +64,7 @@ export function Form() {
 				<Input
 					id="phone"
 					placeholder={content.phone.placeholder}
-					{...register("phone")}
+					{...registerPhoneWithMask("phone", "(99) 99999-9999")}
 				/>
 			</div>
 

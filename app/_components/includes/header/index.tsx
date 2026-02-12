@@ -1,6 +1,5 @@
-import Link from "next/link";
 import content from "@/app/_content/header.json";
-import { Button } from "@/components/ui/button";
+import { ScrollToForm } from "../../button";
 
 export function Header() {
 	return (
@@ -8,9 +7,7 @@ export function Header() {
 			<div className="m-auto flex justify-between px-4 py-2 items-center max-w-2xl">
 				<h1 className="font-bold text-white">{content.logo}</h1>
 
-				<Button asChild>
-					<Link href="/">{content.cta}</Link>
-				</Button>
+				<ScrollToForm text={content.cta} />
 			</div>
 		</header>
 	);

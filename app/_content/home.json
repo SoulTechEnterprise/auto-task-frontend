@@ -40,6 +40,32 @@
 			}
 		]
 	},
+	"useCases": {
+		"title": "O que podemos automatizar?",
+		"description": "Conectamos suas ferramentas favoritas para trabalharem sozinhas. Veja exemplos reais:",
+		"items": [
+			{
+				"title": "Atendimento Inteligente",
+				"description": "Responda clientes no WhatsApp 24/7 com IA que entende áudio e agenda reuniões.",
+				"tags": ["WhatsApp", "OpenAI", "Google Agenda"]
+			},
+			{
+				"title": "Gestão de Leads (CRM)",
+				"description": "Quando um lead chega no site, enviamos para o CRM e notificamos seu time no Slack instantaneamente.",
+				"tags": ["Salesforce", "Slack", "Email"]
+			},
+			{
+				"title": "Financeiro & Notas",
+				"description": "Venda aprovada? O sistema gera o contrato, emite a nota fiscal e envia para o cliente sem você clicar em nada.",
+				"tags": ["Stripe", "Google Drive", "PDF"]
+			},
+			{
+				"title": "Onboarding de Clientes",
+				"description": "Assim que o contrato é assinado, criamos as pastas no Drive, tarefas no Trello e enviamos o acesso.",
+				"tags": ["DocuSign", "Trello", "Notion"]
+			}
+		]
+	},
 	"cta": {
 		"title": "Turbine seu fluxo de trabalho!"
 	}
