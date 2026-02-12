@@ -16,7 +16,7 @@ import { Form } from "./_components/form";
 
 export default function Home() {
 	return (
-		<main className="[&_section]:px-4 [&_section]:py-8">
+		<main className="[&_section]:px-4 [&_section]:py-8 max-w-2xl m-auto">
 			<section className="min-h-screen flex flex-col gap-4 justify-center items-center">
 				<div className="size-12 rounded border border-solid border-white flex items-center justify-center">
 					<Rocket className="size-4 text-white" />
