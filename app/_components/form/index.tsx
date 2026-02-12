@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { sendGTMEvent } from "@next/third-parties/google";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { useHookFormMask } from "use-mask-input";
@@ -38,6 +39,17 @@ export function Form() {
 
 	async function onSubmit(data: Schema) {
 		await AxiosN8N(data);
+
+		const nameParts = data.name.trim().split(/\s+/);
+		const firstName = nameParts[0];
+		const lastName = nameParts.length > 1 ? nameParts.pop() : "";
+
+		sendGTMEvent({
+			event: "form_lead",
+			user_first_name: firstName,
+			user_last_name: lastName,
+			user_phone: data.phone,
+		});
 
 		router.push("/thank-you");
 

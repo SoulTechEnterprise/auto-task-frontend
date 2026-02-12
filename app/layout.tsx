@@ -4,6 +4,7 @@ import { BackgroundBlobs } from "./_components/background";
 import { Footer } from "./_components/includes/footer";
 import { ThemeProvider } from "./_components/theme/theme-provider";
 import "./globals.css";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const montserrat = Montserrat({
 	variable: "--font-montserrat",
@@ -44,6 +45,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="pt-BR" suppressHydrationWarning>
+			<GoogleTagManager
+				gtmScriptUrl={process.env.NEXT_PUBLIC_URL_GOOGLE_TAG_MANAGER!}
+				gtmId={process.env.NEXT_PUBLIC_ID_GOOGLE_TAG_MANAGER!}
+			/>
+
 			<body className={`${montserrat.variable} antialiased relative`}>
 				<BackgroundBlobs />
 				<ThemeProvider
