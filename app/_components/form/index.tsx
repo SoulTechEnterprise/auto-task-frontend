@@ -45,7 +45,7 @@ export function Form() {
 		const lastName = nameParts.length > 1 ? nameParts.pop() : "";
 
 		sendGTMEvent({
-			event: "form_lead",
+			event: "lead",
 			user_first_name: firstName,
 			user_last_name: lastName,
 			user_phone: data.phone,
