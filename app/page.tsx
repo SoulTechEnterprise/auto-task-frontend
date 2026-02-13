@@ -105,7 +105,7 @@ export default function Home() {
 						{content.capacities.title}
 					</h2>
 
-					<div className="grid grid-cols-2 gap-4">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 						{content.capacities.items.map((el, index) => {
 							const arr = [
 								RefreshCcw,
@@ -136,7 +136,7 @@ export default function Home() {
 						</p>
 					</div>
 
-					<div className="grid grid-cols-2 gap-4">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 						{content.useCases.items.map((el, index) => {
 							const arr = [MessageCircle, CircleUser, Files, Monitor];
 
